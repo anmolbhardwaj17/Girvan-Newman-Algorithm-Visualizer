@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="container">
+        <div id="outerDiv">
+            <div id="innerDiv">
+            </div>
+        </div>
+        <div class="grid">
+            <div class="g1">
+                <div class="outerDiv">
+                    <div class="innerDiv">
+                        <h1>Understanding Communities</h1>
+                        <h4 class="subhead">This website will help you to analyse the communities and will find the node with <strong>maximum</strong> modularity.</h4>
+                        <form action="getfile" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="myfile"><br><br>
+                            <p class="explain">File should be of .txt format with this layout:<br>node1, node2,weight<br>node1, node3,weight<br>...........so on</p>
+                            <button type="submit" value="Submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="g2">
+                <div class="outerDiv">
+                    <div class="innerDiv">
+                        <div class="svg-rotate">
+                            <img src="{{url_for('static', filename='geometry.svg')}}" align="middle" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
